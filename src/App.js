@@ -1,10 +1,8 @@
-import { RouterProvider } from "react-router-dom";
-import { Navbar } from "./react_Router/SimpleRoutes";
 
 function App() {
   return (
     <>
-      <RouterProvider router={Navbar} />
+      <h1>hello world</h1>
     </>
   )
 }
