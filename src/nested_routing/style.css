@@ -1,0 +1,18 @@
+.navbar {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  text-decoration: none;
+}
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar .active {
+  color: red;
+}
+.content {
+  background-color: yellow;
+  padding: 20px;
+}
