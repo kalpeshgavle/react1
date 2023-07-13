@@ -1,0 +1,94 @@
+.nav-menu {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+}
+.nav-menu h3 {
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.nav-menu a {
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  color: black;
+}
+
+.nav-menu .active {
+  background-color: rgb(236, 75, 12);
+  color: white;
+}
+.main-section {
+  margin: 10px auto;
+  max-width: 1200px;
+  padding: 10px;
+}
+.home-page {
+  margin: 10px auto;
+}
+
+.help-page {
+  margin: 10px 0;
+}
+
+.help-page nav {
+  margin: 10px auto;
+  width: 40%;
+  text-align: center;
+}
+.help-page nav a {
+  display: inline-block;
+  padding: 8px 13px;
+  background-color: rgba(52, 52, 52, 0.7);
+  text-decoration: none;
+  margin: 5px 5px;
+  border-radius: 10px;
+  color: white;
+}
+
+.help-page .active {
+  background-color: rgb(229, 38, 38);
+}
+
+.faq-page .questions {
+  background-color: rgb(170, 168, 168);
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.product-page .product-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 20px;
+}
+
+.product-page img {
+  height: 180px;
+  width: 180px;
+  align-self: center;
+  padding: 10px;
+}
+.product-page a {
+  text-decoration: none;
+}
+
+.product {
+  display: flex;
+  gap: 40px;
+  border: 1px solid black;
+  align-items: center;
+}
+
+.product img {
+  height: 350px;
+  width: 350px;
+  padding: 20px;
+}
+
+.product .product-img {
+  border-right: 1px solid black;
+}
