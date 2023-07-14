@@ -3,7 +3,6 @@ import { Link, useLoaderData, useParams } from "react-router-dom";
 
 export default function ProductDetails() {
   useParams();
-
   const productDetail = useLoaderData();
 
   return (

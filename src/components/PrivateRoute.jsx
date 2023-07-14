@@ -1,13 +1,9 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
-import LoginPage from "../pages/LoginPage";
+import { Navigate, Outlet } from "react-router-dom";
 
 export default function PrivateRoute() {
-  let login = localStorage.getItem("islogin");
-  // const login = localStorage.getItem("islogin");
-  // const login = true;
-  // login = false;
-  console.log(login);
+  let login = JSON.parse(localStorage.getItem("islogin"));
+  // console.log(login);
 
-  return login ? <Outlet /> : <LoginPage />;
+  return login ? <Outlet /> : <Navigate to="login" />;
 }
