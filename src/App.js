@@ -7,7 +7,7 @@ import About from "./pages/About";
 import CocktailDinks from "./pages/CocktailDinks";
 import Counter from "./pages/Counter";
 import PrivateRoute from "./componets/PrivateRoute";
-// import CounterContext from "./componets/CountContext";
+import CounterContext from "./componets/CountContext";
 
 
 export const UserContext = createContext(null)
@@ -23,10 +23,11 @@ function App() {
       <UserContext.Provider value={{ user, setUser, login, setLogin, drinkList, setDrinkList }}>
         <Navbar />
         <Routes>
-          <PrivateRoute path="/" element={<Home />} />
-          <PrivateRoute path="about" element={<About />} />
-          <PrivateRoute path="cocktail" element={<CocktailDinks />} />
-          <PrivateRoute path="counter" element={<Counter />} />
+          <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
+          <Route path="about" element={<PrivateRoute ><About /></PrivateRoute>} />
+          <Route path="cocktail" element={<PrivateRoute><CocktailDinks /></PrivateRoute>} />
+          <Route path="counter" element={<PrivateRoute><CounterContext><Counter /></CounterContext></PrivateRoute>} />
+          {/* <Route path="/about/componentA" element={<PrivateRoute><NestedComponentA /></PrivateRoute>} /> */}
           <Route path="login" element={<Login />} />
         </Routes>
       </UserContext.Provider>
