@@ -26,17 +26,17 @@ export default function Navbar() {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="about">
+              <NavLink className="nav-link" to="/about">
                 About
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="cocktail">
+              <NavLink className="nav-link" to="/cocktail">
                 Cocktails
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="counter">
+              <NavLink className="nav-link" to="/counter">
                 Counter
               </NavLink>
             </li>
@@ -48,7 +48,7 @@ export default function Navbar() {
               </>
             ) : (
               <>
-                <NavLink className="btn btn-success" to="login">
+                <NavLink className="btn btn-success" to="/login">
                   Login
                 </NavLink>
               </>

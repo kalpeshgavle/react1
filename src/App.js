@@ -3,11 +3,11 @@ import Navbar from "./componets/Navbar";
 import Home from "./pages/Home";
 import { createContext, useState } from "react";
 import Login from "./pages/Login";
-import PrivateRoute from "./componets/PrivateRoute";
 import About from "./pages/About";
 import CocktailDinks from "./pages/CocktailDinks";
 import Counter from "./pages/Counter";
-import CounterContext from "./componets/CountContext";
+import PrivateRoute from "./componets/PrivateRoute";
+// import CounterContext from "./componets/CountContext";
 
 
 export const UserContext = createContext(null)
@@ -23,11 +23,11 @@ function App() {
       <UserContext.Provider value={{ user, setUser, login, setLogin, drinkList, setDrinkList }}>
         <Navbar />
         <Routes>
-          <Route path="login" element={<Login />} />
-          <Route exact path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
+          <PrivateRoute path="/" element={<Home />} />
           <PrivateRoute path="about" element={<About />} />
           <PrivateRoute path="cocktail" element={<CocktailDinks />} />
           <PrivateRoute path="counter" element={<Counter />} />
+          <Route path="login" element={<Login />} />
         </Routes>
       </UserContext.Provider>
     </BrowserRouter>
